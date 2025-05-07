@@ -1,0 +1,60 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Container for central alignment */
+.container {
+    text-align: center;
+}
+
+/* Button Style */
+#animateButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#animateButton:hover {
+    background-color: #45a049;
+}
+
+/* Box for Animation */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    margin-top: 30px;
+    transition: transform 1s ease-in-out, background-color 1s ease-in-out;
+}
+
+/* Animation Class */
+.animate {
+    transform: translateX(300px);
+    background-color: #e74c3c;
+}
+
+/* Adding an animation on load */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-300px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.box {
+    animation: slideIn 2s ease-out forwards;
+}
